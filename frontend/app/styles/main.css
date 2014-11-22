@@ -1,0 +1,43 @@
+/*************************************/
+/*        Main Page        */
+/*************************************/
+
+body {
+    font-family: Helvetica;
+    background-color: #FCFCFC;
+}
+
+.navigation {
+    background-color: #cccccc;
+    height: 60px;
+    font-size: 18px;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation a {
+    color: #f8f8f8;
+}
+
+.navigation.product-name {
+    font-size: 2em;
+}
+
+.navigation {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 25px 0;
+    border: 0;
+    color: #f8f8f8;
+}
+
+header {
+    color: #cccccc;
+    font-size: 24px;
+    background-color: #fff;
+    height: 120px;
+    border-bottom: 1px solid #cccccc;
+}   
+
