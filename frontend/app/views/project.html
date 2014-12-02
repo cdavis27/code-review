@@ -1,0 +1,29 @@
+<div class="projects-view">
+
+<div class="container" >
+    <div class="col-xs-12 col-lg-12">
+        
+        <div ng-repeat="file in files" class="card">
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <a href="/flag">
+                            <span class="glyphicon glyphicon-share-alt white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/delete">
+                            <span class="glyphicon glyphicon-trash white"></span>
+                        </a>
+                    </li>
+                <!-- image -->
+            </div>
+            <div ng-click="goToFile(file, projectId)" class="card-footer">
+                <h3 class="title">{{ file.title }}</h3>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>

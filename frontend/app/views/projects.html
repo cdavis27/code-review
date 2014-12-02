@@ -1,0 +1,48 @@
+
+            <!--      <div class="col-lg-12 form-group">
+                <button class="btn btn-primary pull-right">Review</button>
+            </div> -->
+       <!--  </div>
+        <nav class="sub-nav">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#/files">Files</a>
+                    </li>
+                    <li>
+                        <a href="#/allComments">Comments</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div> -->
+
+<div class="projects-view">
+
+<div class="container" >
+    <div class="col-xs-12 col-lg-12">
+        
+        <div ng-repeat="project in projects" class="card">
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <a href="/flag">
+                            <span class="glyphicon glyphicon-share-alt white"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/delete">
+                            <span class="glyphicon glyphicon-trash white"></span>
+                        </a>
+                    </li>
+                <!-- image -->
+            </div>
+            <div ng-click="goToProject(project)" class="card-footer">
+                <h3 class="title">{{ project.title }}</h3>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
