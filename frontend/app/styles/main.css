@@ -4,7 +4,7 @@
 
 body {
     font-family: Helvetica;
-    background-color: #FCFCFC;
+    background-color: #edeff0;
 }
 
 .navigation {
@@ -21,16 +21,26 @@ body {
     color: #f8f8f8;
 }
 
-.navigation.product-name {
-    font-size: 2em;
+.navigation a:hover {
+    text-decoration: none;
+}
+
+.navigation .tabs a:hover {
+    text-decoration: none;
+    color: #fff;
 }
 
 .navigation {
     text-transform: uppercase;
-    font-weight: 700;
+    /*font-weight: 300;*/
     padding: 25px 0;
     border: 0;
     color: #f8f8f8;
+}
+
+.navigation .user-settings {
+    text-align: right;
+
 }
 
 header {
@@ -39,5 +49,99 @@ header {
     background-color: #fff;
     height: 120px;
     border-bottom: 1px solid #cccccc;
-}   
+}
+
+/*************************************/
+/*             Projects              */
+/*************************************/
+
+.sub-nav a {
+   color: #cccccc;
+}
+
+.sub-nav li {
+   display: inline;
+}
+
+.card {
+    width: 320px;
+    border: 1px solid transparent;
+    margin: 20px 20px;
+ /*   border: 1px solid;*/
+    border-radius: 4px;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    overflow: hidden;
+    display: inline-block;
+}
+
+.card .card-body {
+    background-color: #333333;
+    height:260px;
+    text-align: right;
+    padding-right: 16px;
+    padding-top: 16px;
+}
+
+.card .card-body li {
+  display: inline;
+}
+
+.card .card-footer {
+    height: 60px;
+    background-color: #fff;
+}
+
+.card .card-footer .title {
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.card .card-footer .date {
+    color: #707070;
+}
+
+.white {
+    color: #fff;
+}
+
+/*************************************/
+/*             files                 */
+/*************************************/
+
+/*************************************/
+/*             comments              */
+/*************************************/
+
+/*************************************/
+/*             file                  */
+/*************************************/
+.file-view {
+    height: 800px;
+    background-color: #FCFCFC;
+}
+
+.file-view .gutter {
+    width: 100px;
+    background-color: #000;
+}
+
+.file-view .side-bar {
+    width: 250px;
+    background-color: #FCFCFC;
+    height: 800px;
+}
+
+.CodeMirror {
+    height: 800px;
+}
+/*************************************/
+/*             Reviews               */
+/*************************************/
+
+/*************************************/
+/*             Activity              */
+/*************************************/
 

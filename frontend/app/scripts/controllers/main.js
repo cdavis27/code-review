@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the codeReviewApp
  */
-angular.module('codeReviewApp')
+angular.module('codeReviewApp.controllers')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

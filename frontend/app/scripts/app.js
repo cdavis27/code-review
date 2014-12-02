@@ -1,4 +1,5 @@
 'use strict';
+angular.module('codeReviewApp.controllers', []);
 
 /**
  * @ngdoc overview
@@ -15,7 +16,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.codemirror',
+    'codeReviewApp.controllers'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -23,11 +26,28 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/projects', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl'
+      })
+      .when('/projects/:projectId', {
+        templateUrl: 'views/project.html',
+        controller: 'ProjectCtrl'
+      })
+      .when('/reviews', {
+        templateUrl: 'views/reviews.html',
+        controller: 'ReviewsCtrl'
+      })
+      .when('/activity', {
+        templateUrl: 'views/activity.html',
+        controller: 'ActivityCtrl'
+      })
+      .when('/projects/:projectId/file/:fileId', {
+        templateUrl: 'views/file.html',
+        controller: 'FileCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+
