@@ -1,14 +1,67 @@
 /*************************************/
+/*             Landing Page          */
+/*************************************/
+
+.main-view {
+    background-color: #fff;
+}
+
+.main-view .navigation {
+    background-color: #fff;
+    height: 60px;
+    font-size: 18px;
+    padding: 25px 0;
+}
+
+.main-view .navigation li {
+       display: inline;
+}
+
+.main-view .navigation a {
+    color: #000;
+    margin: 25px;
+}
+
+.main-view .navigation a:hover {
+    text-decoration: none;
+}
+
+.main-view .navigation .tabs a:hover {
+    color: #cccccc;
+}
+
+.main-view .login-button {
+    margin-left: 25px;
+}
+
+.tagline {
+    height: 500px;
+    text-align: center;
+}
+
+.tagline .main-tagline {
+    padding-top: 150px;
+    padding-bottom: 15px;
+    font-size: 36px;
+
+}
+
+.tagline .sub-tagline {
+    font-size: 18px;
+
+}
+
+/*************************************/
 /*        Main Page        */
 /*************************************/
 
 body {
     font-family: Helvetica;
-    background-color: #edeff0;
+    background-color: #F4F5F5
 }
 
 .navigation {
-    background-color: #cccccc;
+    background-color: #676668;
     height: 60px;
     font-size: 18px;
 }
@@ -21,17 +74,13 @@ body {
     color: #f8f8f8;
 }
 
-.navigation a:hover {
-    text-decoration: none;
-}
-
 .navigation .tabs a:hover {
     text-decoration: none;
     color: #fff;
 }
 
 .navigation {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     /*font-weight: 300;*/
     padding: 25px 0;
     border: 0;
@@ -44,7 +93,7 @@ body {
 }
 
 header {
-    color: #cccccc;
+    color: #676668
     font-size: 24px;
     background-color: #fff;
     height: 120px;
@@ -56,7 +105,7 @@ header {
 /*************************************/
 
 .sub-nav a {
-   color: #cccccc;
+   color: #676668;
 }
 
 .sub-nav li {
@@ -92,15 +141,11 @@ header {
 }
 
 .card .card-footer .title {
-    color: #333333;
+    color: #676668;
     text-transform: uppercase;
     margin: 0;
     padding-top: 16px;
     padding-left: 16px;
-}
-
-.card .card-footer .date {
-    color: #707070;
 }
 
 .white {
@@ -111,13 +156,6 @@ header {
 /*             files                 */
 /*************************************/
 
-/*************************************/
-/*             comments              */
-/*************************************/
-
-/*************************************/
-/*             file                  */
-/*************************************/
 .file-view {
     height: 800px;
     background-color: #FCFCFC;
@@ -137,6 +175,7 @@ header {
 .CodeMirror {
     height: 800px;
 }
+
 /*************************************/
 /*             Reviews               */
 /*************************************/
