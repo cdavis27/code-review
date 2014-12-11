@@ -1,6 +1,5 @@
 'use strict';
 angular.module('codeReviewApp.controllers', []);
-angular.module('codeReviewApp.directives', []);
 
 /**
  * @ngdoc overview
@@ -19,12 +18,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.codemirror',
-    'ngUpload',
-    'restangular',
-    'codeReviewApp.controllers',
-    'codeReviewApp.directives'
+    'codeReviewApp.controllers'
   ])
-  .config(function ($routeProvider, RestangularProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -57,7 +53,5 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-
-      RestangularProvider.setBaseUrl('http://localhost:8001/v1/');
   });
 

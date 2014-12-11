@@ -1,6 +1,9 @@
 <div class="file-view">
-    <div class="side-bar col-lg-12 container"></div>
-
-    <div ui-codemirror ui-codemirror-opts="editorOptions"></div>
-    
+	<div class="container">
+	    <div project-header project-name="project.name" file-name="file.name"></div>
+	</div>
+    <div class="editor-container">
+	    <div class="sidebar"></div>
+	    <div class="editor" ui-codemirror ui-codemirror-opts="editorOptions" ng-model="file.contents"></div>
+	</div> 
 </div>

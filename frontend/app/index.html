@@ -22,92 +22,39 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-     <!-- Navigation -->
-    <nav class="navigation">
-        <div class="container">
-            <div class="col-lg-3 nav-header">
-                <a class="product-name" href="#main-page">Code Review</a>
-            </div>
-              <div class="col-lg-4 tabs">
-                <ul>
-                    <li>
-                        <a href="#/projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#/reviews">Reviews</a>
-                    </li>
-                    <li>
-                        <a href="#/activity">Activity</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-5 user-settings">
-                <ul>
-                    <li>
-                        <a href="#username">User Name</a>
-                    </li>
-                    <li>
-                        <a href="settings">Picture</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header --> 
-    <header>
-        <div class="col-lg-12 container">
-            <div class="top-row container">
-                <h2 class="title">My Projects</h2>
-                <div class="form">
-                    <div class="form-group">
-                        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#addProject">Upload Project</button>
-                    </div>
-                    <div class="form-group">
-                        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#flagProject">Flag Project</button>
-                    </div>
+    <div ng-hide="hideHeader">
+         <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="col-lg-3 nav-header">
+                    <a class="product-name" href="#/projects">Code Review</a>
+                </div>
+                  <div class="col-lg-5 tabs pull-left">
+                    <ul>
+                        <li>
+                            <a href="#/projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#/reviews">Reviews</a>
+                        </li>
+                        <li>
+                            <a href="#/activity">Activity</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 user-settings">
+                    <ul>
+                        <li>
+                            <a href="#username">User Name</a>
+                        </li>
+                        <li>
+                            <a href="settings">Picture</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </header>
+        </nav>
 
-        <!--Upload Project Modal -->
-        <div class="modal fade" id="addProject" role="dialog">
-            <div class="modal-dialog">
-                <div class="add-project modal-content">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">Upload A New Project</h4>
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="projectName">Project Name</label>
-                            <input type="name" class="form-control" id="projectName" placeholder="Enter project name">
-                        </div>
-                        <div class="form-group">
-                            <label for="zipProject">File input</label>
-                            <input type="file" id="zipProject">
-                        </div>
-                        <button type="submit" class="btn btn-default">Save</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!--Flag Project Modal -->
-        <div class="modal fade" id="flagProject" role="dialog">
-            <div class="modal-dialog">
-                <div class="flag-project modal-content">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">Flag Project For Review</h4>
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="reviewerEmail">Reviewer's Email</label>
-                            <input type="email" class="form-control" id="reviewerEmail" placeholder="Enter reviewer's email">
-                        </div>
-                        <button type="submit" class="btn btn-default">Flag</button>
-                    </form>
-                </div>
-            </div>
-        </div>
     <!-- Add your site or application content here -->
     <div ng-view></div>
 
@@ -144,24 +91,27 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/codemirror/lib/codemirror.js"></script>
     <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+    <script src="bower_components/ngUpload/ng-upload.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
     <!-- endbower -->
+    <script src="bower_components/codemirror/mode/css/css.js"></script>
+    <script src="bower_components/codemirror/mode/clike/clike.js"></script>
+    <script src="bower_components/codemirror/mode/python/python.js"></script>
+    <script src="bower_components/codemirror/mode/php/php.js"></script>
+    <script src="bower_components/codemirror/mode/javascript/javascript.js"></script>
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/projects.js"></script>
         <script src="scripts/controllers/project.js"></script>
         <script src="scripts/controllers/reviews.js"></script>
         <script src="scripts/controllers/activity.js"></script>
         <script src="scripts/controllers/file.js"></script>
-
-        <script src="bower_components/codemirror/mode/css/css.js"></script>
-        <script src="bower_components/codemirror/mode/clike/clike.js"></script>
-        <script src="bower_components/codemirror/mode/python/python.js"></script>
-        <script src="bower_components/codemirror/mode/php/php.js"></script>
-        <script src="bower_components/codemirror/mode/javascript/javascript.js"></script>
+        <script src="scripts/directives/projectHeader/projectHeader.js"></script>
         <!-- endbuild -->
 </body>
 </html>

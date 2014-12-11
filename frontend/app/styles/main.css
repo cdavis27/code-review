@@ -3,7 +3,10 @@
 /*************************************/
 
 .main-view {
-    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("/images/fall.jpg");
+    height: 1500px;
 }
 
 .main-view .navigation {
@@ -43,16 +46,18 @@
     padding-top: 150px;
     padding-bottom: 15px;
     font-size: 36px;
-
 }
 
 .tagline .sub-tagline {
     font-size: 18px;
+}
 
+.signup-container {
+    margin-left: 350px;
 }
 
 /*************************************/
-/*        Main Page        */
+/*        Navigation                 */
 /*************************************/
 
 body {
@@ -60,56 +65,45 @@ body {
     background-color: #F4F5F5
 }
 
-.navigation {
+.main-nav {
     background-color: #676668;
     height: 60px;
     font-size: 18px;
-}
-
-.navigation li {
-    display: inline;
-}
-
-.navigation a {
-    color: #f8f8f8;
-}
-
-.navigation .tabs a:hover {
-    text-decoration: none;
-    color: #fff;
-}
-
-.navigation {
-    /*text-transform: uppercase;*/
-    /*font-weight: 300;*/
     padding: 25px 0;
     border: 0;
     color: #f8f8f8;
 }
 
-.navigation .user-settings {
-    text-align: right;
-
+.main-nav li {
+    display: inline;
 }
 
-header {
-    color: #676668
-    font-size: 24px;
-    background-color: #fff;
-    height: 120px;
-    border-bottom: 1px solid #cccccc;
+.main-nav a {
+    color: #f8f8f8;
+    padding-right: 40px;
+}
+
+.main-nav a:hover {
+    text-decoration: none;
+}
+.main-nav .tabs a:hover {
+    color: #fff;
+}
+
+.main-nav .user-settings {
+    text-align: right;
+
 }
 
 /*************************************/
 /*             Projects              */
 /*************************************/
-
-.sub-nav a {
-   color: #676668;
-}
-
-.sub-nav li {
-   display: inline;
+.projects-view .projects-header {
+    color: #676668
+    font-size: 24px;
+    background-color: #fff;
+    height: 85px;
+    border-bottom: 1px solid #cccccc;
 }
 
 .card {
@@ -121,6 +115,17 @@ header {
     box-shadow: 0 2px 0 rgba(0,0,0,0.07);
     overflow: hidden;
     display: inline-block;
+}
+
+.card .code-preview pre {
+    text-align: left;
+    color: white;
+    background-color: #333;
+    border: none;
+    overflow: hidden;
+    font-size: 9px;
+    margin-top: -17%;
+
 }
 
 .card .card-body {
@@ -138,6 +143,12 @@ header {
 .card .card-footer {
     height: 60px;
     background-color: #fff;
+    cursor: pointer; cursor: hand;
+}
+
+.card .card-footer:hover {
+    cursor: pointer;
+    cursor: hand;
 }
 
 .card .card-footer .title {
@@ -151,34 +162,176 @@ header {
 .white {
     color: #fff;
 }
+/*************************************/
+/*             project               */
+/*************************************/
+.project-view .project-header {
+    color: #676668;
+    background-color: #fff;
+    height: 120px;
+    border-bottom: 1px solid #cccccc;
+    overflow: hidden;
+}
+
+.header-buttons {
+    margin-top: 1.55%;
+    margin-right: 55px;
+    width: 130px;
+}
+
+.project-title{
+    margin-top: 25px;
+    margin-left: 55px;
+    font-size: 22px;
+    display: inline-block;
+}
+
+.file-name {
+    margin-left: 10px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.flag-project-button {
+    width: 130px;
+}
+
+.upload-project-button {
+    width: 130px;
+    margin-bottom: 12%;
+}
+
+.project-nav {
+    padding-top: 13px;
+    font-size: 16px;
+}
+.project-nav ul a .glyphicon {
+    font-size: 15px;
+}
+
+.project-nav a {
+    color: #676668;
+    font-size: 18px;
+    padding-right: 30px;
+}
+
+.project-nav li {
+   display: inline;
+}
+
+.project-nav a:hover {
+    text-decoration: none;
+}
 
 /*************************************/
-/*             files                 */
+/*             file                  */
 /*************************************/
 
-.file-view {
+/*.file-view {
     height: 800px;
     background-color: #FCFCFC;
-}
+}*/
 
 .file-view .gutter {
     width: 100px;
     background-color: #000;
 }
 
-.file-view .side-bar {
-    width: 250px;
-    background-color: #FCFCFC;
-    height: 800px;
-}
-
 .CodeMirror {
     height: 800px;
 }
 
+.file-view .editor-container {
+    width: 100%;
+    height: 100%;
+}
+
+.file-view .sidebar {
+    width: 20%;
+    margin-right: -0.3%;
+    background-color: #E8E8E8;
+    height: 800px;
+    display: inline-block;
+}
+.file-view .editor {
+    width: 80%;
+    margin-right: -0.3%;
+    display: inline-block;
+}
+
 /*************************************/
-/*             Reviews               */
+/*             modals                */
 /*************************************/
+.form-group {
+    margin: 0;
+}
+.modal-title {
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.upload-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 24px;
+}
+
+.upload-button {
+    margin-left: 115px;
+}
+
+.save-button {
+    width: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 80px
+}
+
+.flag-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+
+.submit-button {
+    width: 150px;
+    margin-bottom: 40px;
+    margin-left: 150px;
+}
+
+.instructions {
+    text-align: center;
+    margin-top: 30px;
+    color: #cccccc;
+    font-size: 18px;
+    font-weight: 300;
+    color: #adadad;
+}
+
+.include-message {
+    margin-bottom: 30px;
+    margin-top:10px;
+}
+
+.include-message a {
+    margin-top: 17px;
+    margin-left: 160px;
+}
+
+.include-message a:hover {
+    text-decoration: none;
+}
+
 
 /*************************************/
 /*             Activity              */

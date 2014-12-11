@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:9000/#/projects/1 -->
+<html class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="http://localhost:9000/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost:9000/bower_components/codemirror/lib/codemirror.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="http://localhost:9000/bower_components/codemirror/theme/monokai.css">
+    <link rel="stylesheet" href="http://localhost:9000/styles/main.css">
+    <!-- endbuild -->
+  <style type="text/css"></style></head>
+  <body ng-app="codeReviewApp" class="ng-scope">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ng-hide="hideHeader" class="">
+         <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="col-lg-3 nav-header">
+                    <a class="product-name" href="http://localhost:9000/#/projects">Code Review</a>
+                </div>
+                  <div class="col-lg-5 tabs pull-left">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:9000/#/projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:9000/#/reviews">Reviews</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:9000/#/activity">Activity</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 user-settings">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:9000/#username">User Name</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:9000/settings">Picture</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Add your site or application content here -->
+    <!-- ngView:  --><div ng-view="" class="ng-scope"><div class="project-view ng-scope">
+
+    <!-- Header --> 
+    <header class="project-header">
+        <div class="col-lg-12 container">
+            <div class="col-lg-8 containter">
+                <h2 class="project-title">Project Name</h2>
+                <div class="project-nav">
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <a href="http://localhost:9000/#/project">
+                                    <span class="glyphicon glyphicon-file">
+                                        <p>Files</p> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://localhost:9000/#/comments" style="
+    width: 300px;
+">
+                                    <span class="glyphicon glyphicon-comment" style="
+"> 
+                                        <p>Comments</p>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-buttons col-lg-4 pull-right form">
+                <div class="form-group">
+                    <button type="button" class="upload-project-button btn btn-primary pull-right" data-toggle="modal" data-target="#addProject">Upload Project</button>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="flag-project-button btn btn-primary pull-right" data-toggle="modal" data-target="#flagProject">Flag Project</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Upload Project Modal -->
+    <div class="add-project containter col-lg-12 modal fade" id="addProject" role="dialog">
+        <div class="modal-dialog">
+            <div class="add-project modal-content">
+                <div class="close-button">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                </div>
+                <div>
+                    <h4 class="modal-title">Upload</h4>
+                </div>
+                <form class="upload-form ng-pristine ng-valid" role="form">
+                    <div class="cloud-image form-group">
+                        <img src="./localhost_files/upload-cloud-09.png">
+                    </div>
+                    <div class="upload-button form-group">
+                        <label for="zipProject"></label>
+                        <input type="file" id="zipProject" title="foo">
+                    </div>
+                    <button type="submit" class="save-button btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Flag Project Modal -->
+    <div class="containter col-lg-12 modal fade" id="flagProject" role="dialog">
+            <div class="modal-dialog">
+                <div class="flag-project modal-content">
+                    <div class="close-button">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    </div>
+                    <h4 class="modal-title">Flag</h4>
+                    <form class="flag-form ng-pristine ng-valid" role="form">
+                        <div class="reviewer-textbox input-group input-group-lg">
+                            <span class="input-group-addon glyphicon glyphicon-user"></span>
+                            <input type="email" class="form-control" id="reviewerEmail" placeholder="Search with reviewer&#39;s email address">
+                        </div>
+                        <div class="instructions input-group">
+                            <p>This person will gain access to the project and be able to download the code and make comments.</p>
+                        </div>
+                        <div class="include-message input-group">
+                            <a ng-click="toggleMessage();">Include a message?</a>
+                        </div>
+                        <div class="input-group">
+                            <button type="submit" class="submit-button btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container ng-scope">
+        <div class="col-xs-12 col-lg-12">
+            <!-- ngRepeat: file in files --><div ng-repeat="file in files" class="card ng-scope">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:9000/flag">
+                                <span class="glyphicon glyphicon-share-alt white"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:9000/delete">
+                                <span class="glyphicon glyphicon-trash white"></span>
+                            </a>
+                        </li>
+                    <!-- image -->
+                </ul></div>
+                <div ng-click="goToFile(file, projectId)" class="card-footer">
+                    <h3 class="title ng-binding">File 1</h3>
+                </div>
+            </div><!-- end ngRepeat: file in files --><div ng-repeat="file in files" class="card ng-scope">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:9000/flag">
+                                <span class="glyphicon glyphicon-share-alt white"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:9000/delete">
+                                <span class="glyphicon glyphicon-trash white"></span>
+                            </a>
+                        </li>
+                    <!-- image -->
+                </ul></div>
+                <div ng-click="goToFile(file, projectId)" class="card-footer">
+                    <h3 class="title ng-binding">file 2</h3>
+                </div>
+            </div><!-- end ngRepeat: file in files --><div ng-repeat="file in files" class="card ng-scope">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:9000/flag">
+                                <span class="glyphicon glyphicon-share-alt white"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:9000/delete">
+                                <span class="glyphicon glyphicon-trash white"></span>
+                            </a>
+                        </li>
+                    <!-- image -->
+                </ul></div>
+                <div ng-click="goToFile(file, projectId)" class="card-footer">
+                    <h3 class="title ng-binding">file 3</h3>
+                </div>
+            </div><!-- end ngRepeat: file in files -->
+        </div>
+    </div>
+
+</div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script async="" src="./localhost_files/analytics.js"></script><script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="./localhost_files/jquery.js"></script>
+    <script src="./localhost_files/angular.js"></script>
+    <script src="./localhost_files/json3.js"></script>
+    <script src="./localhost_files/bootstrap.js"></script>
+    <script src="./localhost_files/angular-resource.js"></script>
+    <script src="./localhost_files/angular-cookies.js"></script>
+    <script src="./localhost_files/angular-sanitize.js"></script>
+    <script src="./localhost_files/angular-animate.js"></script>
+    <script src="./localhost_files/angular-touch.js"></script>
+    <script src="./localhost_files/angular-route.js"></script>
+    <script src="./localhost_files/codemirror.js"></script>
+    <script src="./localhost_files/ui-codemirror.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="./localhost_files/app.js"></script>
+        <script src="./localhost_files/main.js"></script>
+        <script src="./localhost_files/login.js"></script>
+        <script src="./localhost_files/projects.js"></script>
+        <script src="./localhost_files/project.js"></script>
+        <script src="./localhost_files/reviews.js"></script>
+        <script src="./localhost_files/activity.js"></script>
+        <script src="./localhost_files/file.js"></script>
+
+        <script src="./localhost_files/css.js"></script>
+        <script src="./localhost_files/clike.js"></script>
+        <script src="./localhost_files/python.js"></script>
+        <script src="./localhost_files/php.js"></script>
+        <script src="./localhost_files/javascript.js"></script>
+        <!-- endbuild -->
+
+<script type="text/javascript">document.write('<script src="' + (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script><script src="./localhost_files/livereload.js" type="text/javascript"></script>
+
+
+</div></body></html>

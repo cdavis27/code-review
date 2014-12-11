@@ -1,48 +1,82 @@
-
-            <!--      <div class="col-lg-12 form-group">
-                <button class="btn btn-primary pull-right">Review</button>
-            </div> -->
-       <!--  </div>
-        <nav class="sub-nav">
-            <div class="container">
-                <ul>
-                    <li>
-                        <a href="#/files">Files</a>
-                    </li>
-                    <li>
-                        <a href="#/allComments">Comments</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div> -->
-
 <div class="projects-view">
 
-<div class="container" >
-    <div class="col-xs-12 col-lg-12">
-        
-        <div ng-repeat="project in projects" class="card">
-            <div class="card-body">
-                <ul>
-                    <li>
-                        <a href="/flag">
-                            <span class="glyphicon glyphicon-share-alt white"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/delete">
-                            <span class="glyphicon glyphicon-trash white"></span>
-                        </a>
-                    </li>
-                <!-- image -->
+<!-- Header --> 
+    <header class="projects-header">
+        <div class="col-lg-12 top-row container">
+            <div class="col-lg-3 containter">
+                <h2 class="projects-title">My Projects</h2>
             </div>
-            <div ng-click="goToProject(project)" class="card-footer">
-                <h3 class="title">{{ project.title }}</h3>
+            <div class="header-buttons col-lg-1 pull-right form">
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#addProject">Upload Project</button>
+                </div>
+             <!--    <div class="form-group">
+                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#flagProject">Flag Project</button>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+        <!--Upload Project Modal -->
+        <div class="modal fade" id="addProject" role="dialog">
+            <div class="modal-dialog">
+                <div class="add-project modal-content">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Upload A New Project</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="projectName">Project Name</label>
+                            <input type="name" class="form-control" id="projectName" placeholder="Enter project name">
+                        </div>
+                        <div class="form-group">
+                            <label for="zipProject">File input</label>
+                            <input type="file" id="zipProject">
+                        </div>
+                        <button type="submit" class="btn btn-default">Save</button>
+                    </form>
+                </div>
             </div>
         </div>
 
-    </div>
-</div>
+        <!--Flag Project Modal -->
+ <!--        <div class="modal fade" id="flagProject" role="dialog">
+            <div class="modal-dialog">
+                <div class="flag-project modal-content">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Flag Project For Review</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="reviewerEmail">Reviewer's Email</label>
+                            <input type="email" class="form-control" id="reviewerEmail" placeholder="Enter reviewer's email">
+                        </div>
+                        <button type="submit" class="btn btn-default">Flag</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
+    <div class="container" >
+        <div class="col-xs-12 col-lg-12"> 
+            <div ng-repeat="project in projects" class="card">
+                <div class="card-body">
+                    <ul class="icons">
+                        <li>
+                            <a href="/flag">
+                                <span class="glyphicon glyphicon-share-alt white"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/delete">
+                                <span class="glyphicon glyphicon-trash white"></span>
+                            </a>
+                        </li>
+                    <!-- image -->
+                </div>
+                <div ng-click="goToProject(project)" class="card-footer">
+                    <h3 class="title">{{ project.name }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

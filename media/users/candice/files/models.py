@@ -42,7 +42,6 @@ class Project(models.Model):
 
 class Language(models.Model):
 	name = models.CharField(max_length=100)
-	codemirror_mode = models.CharField(max_length=100)
 
 	def __unicode__(self):
 		return "[{}]: {}".format(self.id, self.name)
@@ -50,19 +49,12 @@ class Language(models.Model):
 
 class File(models.Model):
 	name = models.CharField(max_length=100)
-	project = models.ForeignKey(Project, related_name='files')
-	language = models.ForeignKey(Language, null=True, blank=True)
+	project = models.ForeignKey(Project)
+	language = models.ForeignKey(Language)
 	file = models.FileField(upload_to=File_file)
 
 	def __unicode__(self):
 		return "[{}]: {} of {}".format(self.id, self.name, self.project.name)
-
-	# Override the save method
-	def save(self, *args, **kwargs):
-		# You have a new file coming in, so do some logic and figure
-		# out what language this file is.
-		# And then, set the language and call save it.
-		super(File, self).save(*args, **kwargs)
 
 
 class Comment(models.Model):
