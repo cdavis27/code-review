@@ -1,20 +1,25 @@
 <div>
-    <div class="modal-header">
-        <h4>Add Comment for {{ file.name }}</h4>
-    </div>
-    <div class="modal-body add-comment">
-        <div class="line-number">
-            <p>Line Number: {{ newComment.line_number }}</p>
+
+    <div class="add-comment modal-content">
+        <div class="close-button">
+            <button ng-click="cancel()" class=><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         </div>
-        <form class="comment-form" role="form">
-            <div class="comment-field form-group">
-                <textarea ng-model="newComment.text" class="form-control" rows="3"></textarea>
+        <div class="modal-title">
+            <h4>Add Comment for {{ file.name }}</h4>
+        </div>
+        <div class="modal-body add-comment">
+            <div class="line-number">
+                <p>Line Number: {{ newComment.line_number }}</p>
             </div>
-                
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button ng-click="saveComment(newComment)" class="save-comment-button btn btn-primary">Save</button>
-        <button ng-click="cancel()" class="save-comment-button btn">Cancel</button>
+            <form class="comment-form" role="form">
+                <div class="comment-field form-group">
+                    <textarea ng-model="newComment.text" class="form-control" rows="3"></textarea>
+                </div>
+                    
+            </form>
+        </div>
+        <div>
+            <button ng-click="saveComment(newComment)" class="save-comment-button btn btn-primary">Save</button>
+        </div>
     </div>
 </div>

@@ -76,9 +76,9 @@
                             <p>This person will gain access to the project and be able to download the code and make comments.</p>
                         </div>
                         <div class="include-message input-group">
-                            <a ng-click="toggleMessage();">Include a message?</a>
+                            <a ng-click="addMessage = !addMessage">Include a message?</a>
                         </div>
-                        <div class="message-textfield form-group">
+                        <div ng-show="addMessage" class="message-textfield form-group">
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
                         <div class="input-group">

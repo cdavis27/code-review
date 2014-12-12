@@ -27,11 +27,11 @@ angular
   ])
   .config(function ($routeProvider, RestangularProvider) {
     $routeProvider
-      .when('/', {
+      .when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-       .when('/login', {
+       .when('/', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })

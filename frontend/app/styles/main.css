@@ -5,8 +5,8 @@
 .main-view {
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url("/images/fall.jpg");
-    height: 1500px;
+    /*background-image: url("/images/fall.jpg");*/
+    height: 800px;
 }
 
 .main-view .navigation {
@@ -66,12 +66,20 @@ body {
 }
 
 .main-nav {
-    background-color: #676668;
+    background: linear-gradient(70deg, #73BD69, #45ACA4);
     height: 60px;
     font-size: 18px;
     padding: 25px 0;
     border: 0;
     color: #f8f8f8;
+    opacity: .8;
+}
+
+a.product-name {
+    opacity: 1;
+    margin-left: 20px;
+    font-size: 24px;
+    line-height: 1;
 }
 
 .main-nav li {
@@ -79,31 +87,45 @@ body {
 }
 
 .main-nav a {
-    color: #f8f8f8;
+    color: #fff;
+    opacity: .7;
     padding-right: 40px;
 }
 
 .main-nav a:hover {
     text-decoration: none;
+    opacity: 1;
 }
 .main-nav .tabs a:hover {
     color: #fff;
 }
 
-.main-nav .user-settings {
+.user-settings {
     text-align: right;
+    margin-right: -35px
 
+}
+
+.user-settings a:hover {
+    opacity: .7;
+    text-decoration: none;
 }
 
 /*************************************/
 /*             Projects              */
 /*************************************/
 .projects-view .projects-header {
-    color: #676668
+    color: #fff
     font-size: 24px;
-    background-color: #fff;
+    background: linear-gradient(70deg, #73BD69, #45ACA4);
     height: 85px;
     border-bottom: 1px solid #cccccc;
+}
+
+.projects-title {
+    color: #fff;
+    margin-left: 140px;
+    font-size: 22px;
 }
 
 .card {
@@ -119,7 +141,7 @@ body {
 
 .card .code-preview pre {
     text-align: left;
-    color: white;
+    color: #fff;
     background-color: #333;
     border: none;
     overflow: hidden;
@@ -165,23 +187,27 @@ body {
 /*************************************/
 /*             project               */
 /*************************************/
-.project-view .project-header {
-    color: #676668;
-    background-color: #fff;
+.project-header {
+    background: linear-gradient(70deg, #73BD69, #45ACA4);
     height: 120px;
-    border-bottom: 1px solid #cccccc;
     overflow: hidden;
+    color: #fff;
+}
+
+.projects-view .header-buttons {
+    margin-top: 1.55%;
+    width: 130px;
+    margin-right: 130px;
 }
 
 .header-buttons {
     margin-top: 1.55%;
-    margin-right: 55px;
     width: 130px;
 }
 
 .project-title{
     margin-top: 25px;
-    margin-left: 55px;
+    margin-left: 20px;
     font-size: 22px;
     display: inline-block;
 }
@@ -201,18 +227,23 @@ body {
     margin-bottom: 12%;
 }
 
-.project-nav {
-    padding-top: 13px;
-    font-size: 16px;
-}
 .project-nav ul a .glyphicon {
     font-size: 15px;
+    color: #fff;
+    opacity: .7;
+}
+
+.project-nav {
+    margin-top: 20px;
 }
 
 .project-nav a {
-    color: #676668;
-    font-size: 18px;
-    padding-right: 30px;
+    font-size: 16px;
+    padding-right: 50px;
+    padding-top: 16px;
+    color: #fff;
+    opacity: .7;
+    margin-left: -35px;
 }
 
 .project-nav li {
@@ -221,6 +252,7 @@ body {
 
 .project-nav a:hover {
     text-decoration: none;
+    opacity: 1;
 }
 
 /*************************************/
@@ -321,6 +353,8 @@ body {
 .include-message {
     margin-bottom: 30px;
     margin-top:10px;
+    cursor: pointer;
+    color: #45ACA4;
 }
 
 .include-message a {
@@ -337,17 +371,64 @@ body {
 }
 
 /*************************************/
-/*             adding comment        */
+/*             Comments              */
 /*************************************/
-
 .comment-gutter {
     width: 20px; 
-    /*background-color: clear; */
+}
+
+.comments-view {
+    background-color: #fff;
+    height: 800px;
+    color: #676668;
+}
+
+.filter-area {
+    height: 60px;
+}
+
+.comment-container {
+    border-top: solid 1px #eeeeee;
+    border-bottom: solid 1px #eeeeee;  
+}
+
+.comment-container img {
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+}
+
+.comment-container .reviewer-name {
+    margin-top: 10px;
 }
 
 .comment-field {
     width: 500px;
     margin-left: 50px
+}
+
+.comment-info {
+    margin-top: 15px;
+}
+
+.comment-info .date {
+    font-size: 12px;
+}
+
+.comment-info .file-name {
+    font-size: 22px;
+    padding-left: 0;
+    margin-left: -1px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.comment-container .comment-text {
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .line-number {
@@ -366,3 +447,140 @@ body {
 /*             Activity              */
 /*************************************/
 
+/*************************************/
+/*             login                 */
+/*************************************/
+.login-view {
+    background: linear-gradient(70deg, #73BD69, #45ACA4);
+    height: 800px;
+    /*box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.5);*/
+}
+.login-form {
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    width: 450px;
+    height: 360px;
+}
+
+.login-header {
+    width: 450px;
+    margin-top: 120px;
+    height:75px;
+    background: #323a45;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    padding: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+.login-title {
+    padding-top: 20px;
+}
+
+.username-field {
+    margin-top: 50px;
+    width: 350px;
+    margin-left: 50px
+}
+
+.password-field {
+    margin-top: 25px;
+    margin-left: 50px;
+    width: 350px;
+}
+
+.login-view-button {
+    width: 350px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.login-subtitle {
+    font-size: 18px;
+    color: #cccccc;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.project-header .btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    opacity: .7;
+}
+
+.project-header .btn-primary:visited {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    opacity: .7;
+}
+
+.project-header .btn-primary:hover {
+    opacity: 1;
+    background-color: transparent;
+    border-color: #fff;
+    /*color: #45ACA4;*/
+}
+
+.project-header .btn-primary:active {
+    opacity: 1;
+    background-color: #fff;
+    border-color: #fff;
+    color: #45ACA4;
+}
+
+.projects-header .btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    opacity: .7;
+}
+
+.projects-header .btn-primary:visited {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    opacity: .7;
+}
+
+.projects-header .btn-primary:hover {
+    opacity: 1;
+    background-color: transparent;
+    border-color: #fff;
+    /*color: #45ACA4;*/
+}
+
+.projects-header .btn-primary:active {
+   color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    opacity: .7;
+}
+
+.modal-content .btn-primary {
+    background-color: #45ACA4;
+    color: #fff; 
+    border-color: #45ACA4;
+}
+
+.modal-content .btn-primary:hover {
+    background-color: #fff;
+    color: #45ACA4; 
+    border-color: #45ACA4;
+}
+
+.modal-content .btn-primary:active {
+    background-color: #45ACA4;
+    color: #fff; 
+    border-color: #45ACA4;
+}
+
+.modal-content .btn-primary:visited {
+    background-color: #45ACA4;
+    color: #fff; 
+    border-color: #45ACA4;
+}
