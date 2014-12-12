@@ -8,11 +8,13 @@ function ($scope, $routeParams, Restangular) {
 
    $scope.project = undefined;
 
+   // $comments = $project.files.comments;
+
    // Asynchronously get data from the server
    Restangular.one('projects', $scope.projectId).get().then(function(data) {
       $scope.project = data;
    })
 
-   
+
 
 }]);

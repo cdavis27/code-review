@@ -5,7 +5,7 @@
 				<p></p>
 			</div>
 
-        	<div ng-repear="comment in project.files" class="comment-container col-lg-12">
+        	<div ng-repeat="comment in project.file.comments" class="comment-container col-lg-12">
             	<div class="col-lg-2">
             		<img src="http://placekitten.com/g/200/200">
             		<p class="reviewr-name">Reviewer</p>
@@ -13,7 +13,7 @@
             	<div class="comment-box col-lg-10 container">
             		<div class="comment-info">
                         <div class="file-name">
-            			     <p>{{ file.name }} {{ comment.lineNumber }}</p>
+            			     <p>{{ comment.lineNumber }}</p>
                         </div>
             		</div>
             		<div class="comment-text">
