@@ -84,7 +84,7 @@ function ($scope, $routeParams, Restangular, $modal) {
 			controller: 'CommentModalCtrl',
 			// size: 'lg',
 			resolve: {
-				lineNumber: function () { return lineNumber; },
+				lineNumber: function () { return (lineNumber + 1); },
 				file: function() { return $scope.file; }
 			}
 		});

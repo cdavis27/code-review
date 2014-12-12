@@ -114,6 +114,9 @@ a.product-name {
 /*************************************/
 /*             Projects              */
 /*************************************/
+.projects-view {
+    height: 800px;
+}
 .projects-view .projects-header {
     color: #fff
     font-size: 24px;
@@ -187,6 +190,10 @@ a.product-name {
 /*************************************/
 /*             project               */
 /*************************************/
+.project-view {
+    height: 800px;
+}
+
 .project-header {
     background: linear-gradient(70deg, #73BD69, #45ACA4);
     height: 120px;
@@ -442,11 +449,6 @@ a.product-name {
     width: 150px;
 }
 
-
-/*************************************/
-/*             Activity              */
-/*************************************/
-
 /*************************************/
 /*             login                 */
 /*************************************/
@@ -583,4 +585,9 @@ a.product-name {
     background-color: #45ACA4;
     color: #fff; 
     border-color: #45ACA4;
+}
+
+footer {
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
