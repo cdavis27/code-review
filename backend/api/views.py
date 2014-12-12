@@ -13,3 +13,8 @@ class ProjectViewSet(viewsets.ModelViewSet):
 class FileViewSet(viewsets.ModelViewSet):
 	queryset = File.objects.all()
 	serializer_class = FileSerializer
+
+
+class CommentViewSet(viewsets.ModelViewSet):
+	queryset = Comment.objects.all()
+	serializer_class = CommentSerializer

@@ -20,6 +20,7 @@ angular
     'ngTouch',
     'ui.codemirror',
     'ngUpload',
+    'ui.bootstrap',
     'restangular',
     'codeReviewApp.controllers',
     'codeReviewApp.directives'
@@ -53,6 +54,10 @@ angular
       .when('/projects/:projectId/file/:fileId', {
         templateUrl: 'views/file.html',
         controller: 'FileCtrl'
+      })
+      .when('/projects/:projectId/comments', {
+        templateUrl: 'views/comments.html',
+        controller: 'CommentsCtrl'
       })
       .otherwise({
         redirectTo: '/'

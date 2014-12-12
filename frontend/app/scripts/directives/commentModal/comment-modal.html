@@ -1,0 +1,20 @@
+<div>
+    <div class="modal-header">
+        <h4>Add Comment for {{ file.name }}</h4>
+    </div>
+    <div class="modal-body add-comment">
+        <div class="line-number">
+            <p>Line Number: {{ newComment.line_number }}</p>
+        </div>
+        <form class="comment-form" role="form">
+            <div class="comment-field form-group">
+                <textarea ng-model="newComment.text" class="form-control" rows="3"></textarea>
+            </div>
+                
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button ng-click="saveComment(newComment)" class="save-comment-button btn btn-primary">Save</button>
+        <button ng-click="cancel()" class="save-comment-button btn">Cancel</button>
+    </div>
+</div>

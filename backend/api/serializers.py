@@ -18,6 +18,7 @@ class FileSerializer(serializers.ModelSerializer):
 	snippet = serializers.SerializerMethodField('_snippet')
 	contents = serializers.SerializerMethodField('_contents')
 	language = serializers.SerializerMethodField('_language')
+	comments = serializers.SerializerMethodField('_comments')
 
 	class Meta:
 		model = File
@@ -37,6 +38,9 @@ class FileSerializer(serializers.ModelSerializer):
 
 	def _language(self, object):
 		return LanguageSerializer(object.language).data
+
+	def _comments(self, object):
+		return CommentSerializer(object.comments, many=True).data
 
 
 class LanguageSerializer(serializers.ModelSerializer):

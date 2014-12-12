@@ -6,6 +6,7 @@ from api import views
 router = DefaultRouter(trailing_slash=True)
 router.register(r'projects', views.ProjectViewSet)
 router.register(r'files', views.FileViewSet)
+router.register(r'comments', views.CommentViewSet)
 
 urlpatterns = patterns('',
 	url(r'^', include(router.urls)),

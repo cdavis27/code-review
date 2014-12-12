@@ -8,7 +8,7 @@ angular.module('codeReviewApp.directives')
 		// priority: 1,
 		// terminal: true,
 		scope: {
-			projectName: '=',
+			project: '=',
 			fileName: '='
 		}, // {} = isolate, true = child, false/undefined = no change
 		// controller: function($scope, $element, $attrs, $transclude) {},

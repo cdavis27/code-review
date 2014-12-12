@@ -332,6 +332,35 @@ body {
     text-decoration: none;
 }
 
+.message-textfield {
+    margin-bottom: 35px;
+}
+
+/*************************************/
+/*             adding comment        */
+/*************************************/
+
+.comment-gutter {
+    width: 20px; 
+    /*background-color: clear; */
+}
+
+.comment-field {
+    width: 500px;
+    margin-left: 50px
+}
+
+.line-number {
+    margin-left: 50px;
+}
+
+.save-comment-button {
+    margin-left: 225px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 150px;
+}
+
 
 /*************************************/
 /*             Activity              */

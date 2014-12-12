@@ -67,7 +67,7 @@ class File(models.Model):
 
 class Comment(models.Model):
 	commentor = models.ForeignKey(settings.AUTH_USER_MODEL)
-	file = models.ForeignKey(File)
+	file = models.ForeignKey(File, related_name='comments')
 	line_number = models.IntegerField(default=1)
 	text = models.TextField()
 	date_created = models.DateTimeField(auto_now_add=True)

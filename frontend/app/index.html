@@ -14,6 +14,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="bower_components/codemirror/theme/monokai.css" />
+    <link rel="stylesheet" href="bower_components/codemirror/theme/base16-dark.css" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -45,10 +46,10 @@
                 <div class="col-lg-4 user-settings">
                     <ul>
                         <li>
-                            <a href="#username">User Name</a>
+                            <a href="#settings">User Name</a>
                         </li>
                         <li>
-                            <a href="settings">Picture</a>
+                            <a href="#settings">Picture</a>
                         </li>
                     </ul>
                 </div>
@@ -94,6 +95,7 @@
     <script src="bower_components/ngUpload/ng-upload.js"></script>
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <script src="bower_components/codemirror/mode/css/css.js"></script>
     <script src="bower_components/codemirror/mode/clike/clike.js"></script>
@@ -111,7 +113,9 @@
         <script src="scripts/controllers/reviews.js"></script>
         <script src="scripts/controllers/activity.js"></script>
         <script src="scripts/controllers/file.js"></script>
+        <script src="scripts/controllers/comments.js"></script>
         <script src="scripts/directives/projectHeader/projectHeader.js"></script>
+        <script src="scripts/directives/commentModal/commentModal.js"></script>
         <!-- endbuild -->
 </body>
 </html>
