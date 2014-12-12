@@ -5,19 +5,19 @@
 				<p>Filter stuff here</p>
 			</div>
 
-        	<div class="comment-container col-lg-12">
+        	<div ng-repear="comment in project.files" class="comment-container col-lg-12">
             	<div class="col-lg-2">
             		<img src="http://placekitten.com/g/200/200">
-            		<p class="reviewr-name">Reviewer name</p>
+            		<p class="reviewr-name">Zappala</p>
             	</div>
             	<div class="comment-box col-lg-10 container">
             		<div class="comment-info">
                         <div class="file-name">
-            			     <p>File Name - line number</p>
+            			     <p>{{ file.name }} {{ comment.lineNumber }}</p>
                         </div>
             		</div>
             		<div class="comment-text">
-            			<p>full comment goes here. Comment comment comment comment comment comment comment comment comment comment comment comment</p>
+            			<p>{{ comment.text }}</p>
             		</div>
             	</div>
             </div>

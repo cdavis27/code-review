@@ -3,6 +3,6 @@
 angular.module('codeReviewApp.controllers')
 .controller('LoginCtrl', ['$scope', '$location',
 function ($scope, $location) {
-   // $scope.$root.hideHeader = true;
+   $scope.$root.hideHeader = true;
    
   }]);

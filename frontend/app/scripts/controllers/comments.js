@@ -13,4 +13,6 @@ function ($scope, $routeParams, Restangular) {
       $scope.project = data;
    })
 
+   
+
 }]);

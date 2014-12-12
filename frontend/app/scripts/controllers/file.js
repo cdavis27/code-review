@@ -90,7 +90,7 @@ function ($scope, $routeParams, Restangular, $modal) {
 		});
 
 		modalInstance.result.then(function (newComment) {
-			// here you can do your code to POST to the server
+			// here you can do the code to POST to the server
 			// using restangular (for a new Comment)
 			console.log("Comment Text:", newComment);
 			Restangular.all('comments/').customPOST(newComment).then(function(data) {
